@@ -3,7 +3,7 @@ package binarySearchTrees;
 import java.util.Stack;
 
 
-public class BinaryTree<T extends Comparable<T>> {
+public class BinaryTree<T extends Comparable<T>> {  //created generic type
 	private BNode<T> root;
 	private boolean found; // used by remove methods
 
@@ -265,14 +265,14 @@ public class BinaryTree<T extends Comparable<T>> {
 
 	}
 
-	
+	//post order traversal
 	public void traversePostOrder() {	
 		traversePo(root.getLC());
 		traversePo(root.getRC());
 		System.out.print(root.getData()  + ", ");
 
 	}
-
+    //recursive call on post order
 	private void traversePo(BNode<T> root) {
 		if (root == null)
 			return; // anchor case		
