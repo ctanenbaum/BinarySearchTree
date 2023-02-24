@@ -17,6 +17,10 @@ public class Main {
 			for (int j = 0; j < 20; j++) {
 				System.out.println("\nInOrder: ");  //printed the array in order each time
 				bst.traverseInOrder();
+				System.out.println();
+				bst.traversePostOrder();
+				System.out.println();
+				bst.traversePreOrder();
 				bst.removeVal(array[j]);  //remove one value at a time 
 			}
 			// if there were duplicates it removes both at once
